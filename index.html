@@ -1,17 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Recommendation System</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/smart_wizard_all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+    :root {
+        --sw-border-color:  #eeeeee;
+        --sw-toolbar-btn-color:  #ffffff;
+        --sw-toolbar-btn-background-color:  #212529;
+        --sw-anchor-default-primary-color:  #f8f9fa;
+        --sw-anchor-default-secondary-color:  #b0b0b1;
+        --sw-anchor-active-primary-color:  #212529;
+        --sw-anchor-active-secondary-color:  #ffffff;
+        --sw-anchor-done-primary-color:  #90d4fa;
+        --sw-anchor-done-secondary-color:  #fefefe;
+        --sw-anchor-disabled-primary-color:  #f8f9fa;
+        --sw-anchor-disabled-secondary-color:  #dbe0e5;
+        --sw-anchor-error-primary-color:  #dc3545;
+        --sw-anchor-error-secondary-color:  #ffffff;
+        --sw-anchor-warning-primary-color:  #ffc107;
+        --sw-anchor-warning-secondary-color:  #ffffff;
+        --sw-progress-color:  #212529;
+        --sw-progress-background-color:  #f8f9fa;
+        --sw-loader-color:  #212529;
+        --sw-loader-background-color:  #f8f9fa;
+        --sw-loader-background-wrapper-color:  rgba(255, 255, 255, 0.7);
+    }
+    </style>
 </head>
+
 <body>
-    
+    <main class="app">
+        <header class="bg-dark p-3 text-center text-white">
+            <h3>BOOK RECOMMENDATION SYSTEM</h3>
+            <h5>Group 25</h5>
+        </header>
+        <section class="survey py-5">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header text-bg-dark">
+                        <h4>Please tell us how you feel today 😇!</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- SmartWizard html -->
+                        <div id="smartwizard">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#step-1">
+                                        <div class="num">1</div>
+                                        Personal Information
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#step-2">
+                                        <span class="num">2</span>
+                                        Emotional State
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#step-3">
+                                        <span class="num">3</span>
+                                        Current Situation
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#step-4">
+                                        <span class="num">4</span>
+                                        Reading Preferences
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#step-5">
+                                        <span class="num">5</span>
+                                        Specific Needs & Desires
+                                    </a>
+                                </li>
+                            </ul>
+                            <form action="#">
+                                <div class="tab-content">
+                                    <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+                                        
+                                    </div>
+                                    <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+                                        Step content
+                                    </div>
+                                    <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+                                        Step content
+                                    </div>
+                                    <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+                                        Step content
+                                    </div>
+                                    <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5">
+                                        Step content
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Include optional progressbar HTML -->
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.smartWizard.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

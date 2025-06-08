@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Recommendation System</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/smart_wizard_all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{{url_for("static", filename="assets/css/bootstrap.min.css")}}" />
+    <link rel="stylesheet" href="{{url_for("static", filename="assets/css/smart_wizard_all.min.css")}}" />
+    <link rel="stylesheet" href="{{url_for("static", filename="assets/css/style.css")}}" />
 
     <style>
     :root {
@@ -148,12 +148,13 @@
                 </div>
             </div>
         </section>
+        <footer class="text-bg-dark p-3 text-center">Group 25 @copywrite 2025</footer>
     </main>
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.smartWizard.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{url_for('static', filename='assets/js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/jquery.smartWizard.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
 </body>
 
 </html>

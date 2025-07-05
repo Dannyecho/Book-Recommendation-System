@@ -1,0 +1,317 @@
+{% extends 'base.html' %} {% block head %}
+<title>Questionaire</title>
+{%endblock%} {%block body%}
+<main class="app">
+  <header class="bg-dark p-3 text-center text-white">
+    <h3>BOOK RECOMMENDATION SYSTEM</h3>
+    <h5>Group 25</h5>
+  </header>
+  <section class="survey py-5">
+    <div class="container">
+      <div class="card">
+        <div class="card-header text-bg-dark">
+          <h4>Please tell us how you feel today 😇!</h4>
+        </div>
+        <div class="card-body">
+          <!-- SmartWizard html -->
+          <div id="smartwizard">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#step-1">
+                  <div class="num">1</div>
+                  Personal Information
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#step-2">
+                  <span class="num">2</span>
+                  Emotional State
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#step-3">
+                  <span class="num">3</span>
+                  Current Situation
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#step-4">
+                  <span class="num">4</span>
+                  Reading Preferences
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#step-5">
+                  <span class="num">5</span>
+                  Specific Needs & Desires
+                </a>
+              </li>
+            </ul>
+            <form action="#">
+              <hr />
+              <div class="tab-content">
+                <div
+                  id="step-1"
+                  class="tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="step-1"
+                >
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div>
+                        <label for="">First name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="firstname"
+                          required
+                        />
+                      </div>
+                      <br />
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label for="">Last name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastname"
+                          required
+                        />
+                      </div>
+                      <br />
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label for="">Email Address</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="lastname"
+                          required
+                        />
+                      </div>
+                      <br />
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label for="">Age Range</label>
+                        <select name="age_range" class="form-control">
+                          <option value="4-8">4 - 8 Years</option>
+                          <option value="9-12">9 - 12 Years</option>
+                          <option value="teenager">Teenager</option>
+                          <option value="Adult">Adult</option>
+                        </select>
+                      </div>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="step-2"
+                  class="tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="step-2"
+                >
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >1. Select your primary mood(s):</label
+                    >
+                    <div class="mood-grid">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodHappy"
+                          name="current_mood[]"
+                          value="happy"
+                        />
+                        <label class="form-check-label" for="moodHappy"
+                          >😊 Happy</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodCalm"
+                          name="current_mood[]"
+                          value="calm"
+                        />
+                        <label class="form-check-label" for="moodCalm"
+                          >😌 Calm</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodExcited"
+                          name="current_mood[]"
+                          value="excited"
+                        />
+                        <label class="form-check-label" for="moodExcited"
+                          >🤩 Excited</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodThoughtful"
+                          name="current_mood[]"
+                          value="thoughtful"
+                        />
+                        <label class="form-check-label" for="moodThoughtful"
+                          >🤔 Thoughtful</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodRelaxed"
+                          name="current_mood[]"
+                          value="relaxed"
+                        />
+                        <label class="form-check-label" for="moodRelaxed"
+                          >😴 Relaxed</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodEnergized"
+                          name="current_mood[]"
+                          value="energized"
+                        />
+                        <label class="form-check-label" for="moodEnergized"
+                          >⚡ Energized</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodAnxious"
+                          name="current_mood[]"
+                          value="anxious"
+                        />
+                        <label class="form-check-label" for="moodAnxious"
+                          >😟 Anxious</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodSad"
+                          name="current_mood[]"
+                          value="sad"
+                        />
+                        <label class="form-check-label" for="moodSad"
+                          >😔 Sad</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodStressed"
+                          name="current_mood[]"
+                          value="stressed"
+                        />
+                        <label class="form-check-label" for="moodStressed"
+                          >😤 Stressed</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodBored"
+                          name="current_mood[]"
+                          value="bored"
+                        />
+                        <label class="form-check-label" for="moodBored"
+                          >😑 Bored</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodCreative"
+                          name="current_mood[]"
+                          value="creative"
+                        />
+                        <label class="form-check-label" for="moodCreative"
+                          >💡 Creative</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="moodReflective"
+                          name="current_mood[]"
+                          value="reflective"
+                        />
+                        <label class="form-check-label" for="moodReflective">
+                          contemplation Reflective</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-text mt-2">
+                      Select one or more moods that best describe how you feel.
+                    </div>
+                  </div>
+                  
+                </div>
+                <div
+                  id="step-3"
+                  class="tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="step-3"
+                >
+                  Step content
+                </div>
+                <div
+                  id="step-4"
+                  class="tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="step-4"
+                >
+                  Step content
+                </div>
+                <div
+                  id="step-5"
+                  class="tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="step-5"
+                >
+                  Step content
+                </div>
+              </div>
+            </form>
+
+            <!-- Include optional progressbar HTML -->
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 0%"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-bg-dark p-3 text-center">Group 25 @copywrite 2025</footer>
+</main>
+{%endblock%}

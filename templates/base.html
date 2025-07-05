@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Recommendation System</title>
+
+    <link rel="stylesheet" href="{{url_for("static", filename="assets/css/bootstrap.min.css")}}" />
+    <link rel="stylesheet" href="{{url_for("static", filename="assets/css/smart_wizard_all.min.css")}}" />
+    <link rel="stylesheet" href="{{url_for("static", filename="assets/css/style.css")}}" />
+
+    <style>
+    :root {
+        --sw-border-color:  #eeeeee;
+        --sw-toolbar-btn-color:  #ffffff;
+        --sw-toolbar-btn-background-color:  #212529;
+        --sw-anchor-default-primary-color:  #f8f9fa;
+        --sw-anchor-default-secondary-color:  #b0b0b1;
+        --sw-anchor-active-primary-color:  #212529;
+        --sw-anchor-active-secondary-color:  #ffffff;
+        --sw-anchor-done-primary-color:  #90d4fa;
+        --sw-anchor-done-secondary-color:  #fefefe;
+        --sw-anchor-disabled-primary-color:  #f8f9fa;
+        --sw-anchor-disabled-secondary-color:  #dbe0e5;
+        --sw-anchor-error-primary-color:  #dc3545;
+        --sw-anchor-error-secondary-color:  #ffffff;
+        --sw-anchor-warning-primary-color:  #ffc107;
+        --sw-anchor-warning-secondary-color:  #ffffff;
+        --sw-progress-color:  #212529;
+        --sw-progress-background-color:  #f8f9fa;
+        --sw-loader-color:  #212529;
+        --sw-loader-background-color:  #f8f9fa;
+        --sw-loader-background-wrapper-color:  rgba(255, 255, 255, 0.7);
+    }
+    </style>
+    {%block head%} {%endblock%}
+</head>
+
+<body>
+    {%block body%} {%endblock%}
+    
+    <script src="{{url_for('static', filename='assets/js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/jquery.smartWizard.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+</body>
+
+</html>

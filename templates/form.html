@@ -267,7 +267,6 @@
                       Select one or more moods that best describe how you feel.
                     </div>
                   </div>
-                  
                 </div>
                 <div
                   id="step-3"
@@ -275,7 +274,64 @@
                   role="tabpanel"
                   aria-labelledby="step-3"
                 >
-                  Step content
+                  <div class="mb-4">
+                    <label for="moodValence" class="form-label"
+                      >2. How positive or negative do you feel?</label
+                    >
+                    <input
+                      type="range"
+                      class="form-range"
+                      id="moodValence"
+                      name="mood_valence"
+                      min="1"
+                      max="10"
+                      value="5"
+                    />
+                    <div class="d-flex justify-content-between mt-2">
+                      <span class="mood-intensity-label"
+                        >Very Negative (1)</span
+                      >
+                      <span class="mood-intensity-label">Neutral (5)</span>
+                      <span class="mood-intensity-label"
+                        >Very Positive (10)</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="moodArousal" class="form-label"
+                      >3. How energetic or calm do you feel?</label
+                    >
+                    <input
+                      type="range"
+                      class="form-range"
+                      id="moodArousal"
+                      name="mood_arousal"
+                      min="1"
+                      max="10"
+                      value="5"
+                    />
+                    <div class="d-flex justify-content-between mt-2">
+                      <span class="mood-intensity-label">Very Calm (1)</span>
+                      <span class="mood-intensity-label">Neutral (5)</span>
+                      <span class="mood-intensity-label"
+                        >Very Energetic (10)</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="moodDescription" class="form-label"
+                      >4. Briefly describe your current mood (optional):</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="moodDescription"
+                      name="mood_description"
+                      rows="3"
+                      placeholder="e.g., 'Feeling a bit tired but optimistic about the day.'"
+                    ></textarea>
+                  </div>
                 </div>
                 <div
                   id="step-4"
@@ -283,7 +339,271 @@
                   role="tabpanel"
                   aria-labelledby="step-4"
                 >
-                  Step content
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >1. Which genres do you enjoy reading?</label
+                    >
+                    <div class="genre-grid">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreFiction"
+                          name="preferred_genres[]"
+                          value="fiction"
+                        />
+                        <label class="form-check-label" for="genreFiction"
+                          >Fiction</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreNonFiction"
+                          name="preferred_genres[]"
+                          value="non-fiction"
+                        />
+                        <label class="form-check-label" for="genreNonFiction"
+                          >Non-Fiction</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreFantasy"
+                          name="preferred_genres[]"
+                          value="fantasy"
+                        />
+                        <label class="form-check-label" for="genreFantasy"
+                          >Fantasy</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreSciFi"
+                          name="preferred_genres[]"
+                          value="science-fiction"
+                        />
+                        <label class="form-check-label" for="genreSciFi"
+                          >Science Fiction</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreMystery"
+                          name="preferred_genres[]"
+                          value="mystery"
+                        />
+                        <label class="form-check-label" for="genreMystery"
+                          >Mystery</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreThriller"
+                          name="preferred_genres[]"
+                          value="thriller"
+                        />
+                        <label class="form-check-label" for="genreThriller"
+                          >Thriller</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreRomance"
+                          name="preferred_genres[]"
+                          value="romance"
+                        />
+                        <label class="form-check-label" for="genreRomance"
+                          >Romance</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreHorror"
+                          name="preferred_genres[]"
+                          value="horror"
+                        />
+                        <label class="form-check-label" for="genreHorror"
+                          >Horror</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreHistorical"
+                          name="preferred_genres[]"
+                          value="historical-fiction"
+                        />
+                        <label class="form-check-label" for="genreHistorical"
+                          >Historical Fiction</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreBiography"
+                          name="preferred_genres[]"
+                          value="biography"
+                        />
+                        <label class="form-check-label" for="genreBiography"
+                          >Biography</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreSelfHelp"
+                          name="preferred_genres[]"
+                          value="self-help"
+                        />
+                        <label class="form-check-label" for="genreSelfHelp"
+                          >Self-Help</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreYA"
+                          name="preferred_genres[]"
+                          value="young-adult"
+                        />
+                        <label class="form-check-label" for="genreYA"
+                          >Young Adult (YA)</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genrePoetry"
+                          name="preferred_genres[]"
+                          value="poetry"
+                        />
+                        <label class="form-check-label" for="genrePoetry"
+                          >Poetry</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="genreClassics"
+                          name="preferred_genres[]"
+                          value="classics"
+                        />
+                        <label class="form-check-label" for="genreClassics"
+                          >Classics</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-text mt-2">Select all that apply.</div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >2. Are there any genres you *don't* want to see
+                      recommended?</label
+                    >
+                    <div class="genre-grid">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="dislikeHorror"
+                          name="disliked_genres[]"
+                          value="horror"
+                        />
+                        <label class="form-check-label" for="dislikeHorror"
+                          >Horror</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="dislikeRomance"
+                          name="disliked_genres[]"
+                          value="romance"
+                        />
+                        <label class="form-check-label" for="dislikeRomance"
+                          >Romance</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="dislikeThriller"
+                          name="disliked_genres[]"
+                          value="thriller"
+                        />
+                        <label class="form-check-label" for="dislikeThriller"
+                          >Thriller</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="dislikeYA"
+                          name="disliked_genres[]"
+                          value="young-adult"
+                        />
+                        <label class="form-check-label" for="dislikeYA"
+                          >Young Adult (YA)</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="dislikeSciFi"
+                          name="disliked_genres[]"
+                          value="science-fiction"
+                        />
+                        <label class="form-check-label" for="dislikeSciFi"
+                          >Science Fiction</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-text mt-2">
+                      Selecting these will help us filter them out.
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="preferredAuthors" class="form-label"
+                      >3. List some of your favorite authors
+                      (comma-separated):</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control tag-input"
+                      id="preferredAuthors"
+                      name="preferred_authors"
+                      placeholder="e.g., Jane Austen, Stephen King, Chimamanda Ngozi Adichie"
+                    />
+                    <div class="form-text">
+                      This helps us understand your unique taste.
+                    </div>
+                  </div>
                 </div>
                 <div
                   id="step-5"
@@ -291,7 +611,315 @@
                   role="tabpanel"
                   aria-labelledby="step-5"
                 >
-                  Step content
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >4. How do you prefer to read your books?</label
+                    >
+                    <div class="radio-grid">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_format"
+                          id="formatPhysical"
+                          value="physical-book"
+                          checked
+                        />
+                        <label class="form-check-label" for="formatPhysical"
+                          >Physical Book</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_format"
+                          id="formatEbook"
+                          value="e-book"
+                        />
+                        <label class="form-check-label" for="formatEbook"
+                          >E-book</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_format"
+                          id="formatAudiobook"
+                          value="audiobook"
+                        />
+                        <label class="form-check-label" for="formatAudiobook"
+                          >Audiobook</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >5. What kind of reading pace/length do you generally
+                      prefer?</label
+                    >
+                    <div class="radio-grid">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_pace_length"
+                          id="paceFast"
+                          value="fast-paced"
+                        />
+                        <label class="form-check-label" for="paceFast"
+                          >Fast-Paced</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_pace_length"
+                          id="paceMedium"
+                          value="medium-paced"
+                          checked
+                        />
+                        <label class="form-check-label" for="paceMedium"
+                          >Medium-Paced</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_pace_length"
+                          id="paceSlow"
+                          value="slow-contemplative"
+                        />
+                        <label class="form-check-label" for="paceSlow"
+                          >Slow/Contemplative</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_pace_length"
+                          id="lengthShort"
+                          value="short-books"
+                        />
+                        <label class="form-check-label" for="lengthShort"
+                          >Shorter Books (&lt;250 pages)</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="preferred_pace_length"
+                          id="lengthLong"
+                          value="long-books"
+                        />
+                        <label class="form-check-label" for="lengthLong"
+                          >Longer Books (&gt;450 pages)</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >6. What's your main goal when you pick up a book?</label
+                    >
+                    <div class="goal-grid">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="goalEscape"
+                          name="reading_goals[]"
+                          value="escape"
+                        />
+                        <label class="form-check-label" for="goalEscape"
+                          >Escape & Be Entertained</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="goalLearn"
+                          name="reading_goals[]"
+                          value="learn-new-things"
+                        />
+                        <label class="form-check-label" for="goalLearn"
+                          >Learn Something New</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="goalRelax"
+                          name="reading_goals[]"
+                          value="relax"
+                        />
+                        <label class="form-check-label" for="goalRelax"
+                          >Relax & Unwind</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="goalChallenged"
+                          name="reading_goals[]"
+                          value="be-challenged"
+                        />
+                        <label class="form-check-label" for="goalChallenged"
+                          >Be Challenged Intellectually</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="goalDiscuss"
+                          name="reading_goals[]"
+                          value="discuss-with-others"
+                        />
+                        <label class="form-check-label" for="goalDiscuss"
+                          >Discuss with a Book Club</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="goalExploreIdeas"
+                          name="reading_goals[]"
+                          value="explore-new-ideas"
+                        />
+                        <label class="form-check-label" for="goalExploreIdeas"
+                          >Explore New Ideas/Perspectives</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-text mt-2">Select all that apply.</div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label mb-3"
+                      >7. What kind of narrative style or tone do you
+                      enjoy?</label
+                    >
+                    <div class="style-grid">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleCharacterDriven"
+                          name="narrative_style[]"
+                          value="character-driven"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="styleCharacterDriven"
+                          >Character-Driven</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="stylePlotDriven"
+                          name="narrative_style[]"
+                          value="plot-driven"
+                        />
+                        <label class="form-check-label" for="stylePlotDriven"
+                          >Plot-Driven</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleHumorous"
+                          name="narrative_style[]"
+                          value="humorous"
+                        />
+                        <label class="form-check-label" for="styleHumorous"
+                          >Humorous</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleDark"
+                          name="narrative_style[]"
+                          value="dark"
+                        />
+                        <label class="form-check-label" for="styleDark"
+                          >Dark / Gritty</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleLyrical"
+                          name="narrative_style[]"
+                          value="lyrical"
+                        />
+                        <label class="form-check-label" for="styleLyrical"
+                          >Lyrical / Poetic</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleIntrospective"
+                          name="narrative_style[]"
+                          value="introspective"
+                        />
+                        <label class="form-check-label" for="styleIntrospective"
+                          >Introspective</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleOptimistic"
+                          name="narrative_style[]"
+                          value="optimistic"
+                        />
+                        <label class="form-check-label" for="styleOptimistic"
+                          >Optimistic</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="styleWhimsical"
+                          name="narrative_style[]"
+                          value="whimsical"
+                        />
+                        <label class="form-check-label" for="styleWhimsical"
+                          >Whimsical</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-text mt-2">Select all that apply.</div>
+                  </div>
+
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      Save Preferences & Get Recommendations
+                    </button>
+                  </div>
                 </div>
               </div>
             </form>

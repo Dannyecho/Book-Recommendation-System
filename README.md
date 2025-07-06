@@ -44,4 +44,5 @@ Suggest books based on mood and genre
 5. Step 4 (Reading Preference): In tbis step, tell us your reading preference.
 6. Step 5 (Specific Needs): Finally, tell the app, your specific needs and desires.
 7. Click "Save Preferences & Get Recommendations" button and let the app do its magic.
+8. ==================================================================================
 

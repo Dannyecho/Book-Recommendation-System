@@ -35,3 +35,15 @@ Suggest books based on mood and genre
 7. Explain reasoning behind suggestions
 8. Categorise books by mood
 9. Test across mood and genre inputs
+
+## How To Use The Book Recommendation System
+1. Access the app using the url (http://127.0.0.1:5000 for now)
+2. Step 1. Contains fields for collecting personal information. Fill in your personal details, then proceed to the next step(Emotional State)
+3. Step 2 (Emotional State): Tell the app how you feel emotionally by filling all required fields in this step.
+4. Step 3 (Current Situation): Describe your current situation. Fill all required fields in this step.
+5. Step 4 (Reading Preference): In tbis step, tell us your reading preference.
+6. Step 5 (Specific Needs): Finally, tell the app, your specific needs and desires.
+7. Click "Save Preferences & Get Recommendations" button and let the app do its magic.
+==================================================================================
+
+
